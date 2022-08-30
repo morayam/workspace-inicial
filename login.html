@@ -17,74 +17,50 @@
 </head>
 
 <body>
-  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">...</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+  
+     <div id="menu">
+        <input type="button" id="btnInicio" value="Inicio"/>
+        <input type="button" id="btnIngreso" value="Ingresar"/>
+        <input type="button" id="btnCerrarSesion" value="Cerrar sesión"/>
     </div>
-  </div>
-</div>
-  <section class="vh-100" style="background-color: #508cfc2c;">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-          <div class="card shadow-2-strong" style="border-radius: 1rem;">
-            <div class="card-body p-5 text-center">
-  
-              <h3 class="mb-5">Sign in</h3>
-  
-              <div class="form-outline mb-4">
-                <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX-2">Email</label>
-              </div>
-  
-              <div class="form-outline mb-4">
-                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX-2">Password</label>
-              </div>
-  
-              <!-- Checkbox -->
-              <div class="form-check d-flex justify-content-start mb-4">
-                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-                <label class="form-check-label" for="form1Example3"> Remember password </label>
-              </div>
-  
-              <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-  
-              <hr class="my-4">
-  
-              <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
-                type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
-              <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
-                type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
-  
-            </div>
-          </div>
+    
+    <div id="inicio">
+        <h1>Bienvenido a e-mercado</h1>
+        <div id="divInicioUsuarioDesconocido">
+            <p>
+                Gracias por formar parte de e-mercado.
+            </p>
+            <p>
+                Por favor, presione ingresar para iniciar sesión.
+            </p>
         </div>
-      </div>
+        <div id="divInicioUsuarioLogueado">
+            <table border="1">
+                <thead>
+                    <th>Nombre de usuario</th>
+                </thead>
+                <tbody id="tablaInicioBody">
+                </tbody>
+            </table>
+        </div>        
     </div>
-  </section>
-  <main class="mt-5">
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+
+    <div id="login">
+        <h4>Inicias sesión</h4>
+        </br>
+        <label>Usuario</label>
+        </br>
+        <input type="text" id=""/>
+        </br>
+        <label>Contraseña</label>
+        </br>
+        <input type="password" id=""/>
+        </br>
+        <input type="button" value="Ingresar" id=""/>
     </div>
-  </main>
+    <script src="login.js"></script>
+/* Para JS*/
+</main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
