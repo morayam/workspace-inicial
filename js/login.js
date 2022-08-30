@@ -9,13 +9,13 @@ function inicio() {
 }
 
 function eventos() {
-    dqs("btnInicio").addEventListener("click", mostrarUInicio);
-    dqs("btnIngreso").addEventListener("click", mostrarUIngreso);
-    dqs("btnCerrarSesion").addEventListener("click", cerrarSesion);
+    dqs("navInicio").addEventListener("click", mostrarUInicio);
+    dqs("navIngreso").addEventListener("click", mostrarUIngreso);
+    dqs("navCerrarSesion").addEventListener("click", cerrarSesion);
 }
 
 function ocultarTodo() {
-    //menu: inicio y login
+    //menu (navbarNav): inicio y login
     dqs("menu").style.display = "none";
     dqs("inicio").style.display = "none";
     dqs("login").style.display = "none";
