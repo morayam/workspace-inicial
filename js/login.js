@@ -1,3 +1,24 @@
+let userData;
+let usersr;
+let loginData;
+let usersl;
+
+// Login 
+const btnIngreso = document.getElementById('btnIngreso')
+
+function loginUser() {
+  usersl = JSON.parse(localStorage.getItem('UsersLogin')) || [];
+  loginData = [{
+    loginEmail: document.getElementById('login-email').value
+  }, {
+    loginPass: document.getElementById('login-pass').value
+  }];
+  usersl.push(loginData)
+  localStorage.setItem('UsersLogin', JSON.stringify(usersl))
+  console.log(usersl)
+  location.reload()
+}
+
 let usuarioLogueado = false;
 
 inicio();
