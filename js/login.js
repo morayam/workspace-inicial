@@ -18,7 +18,7 @@ function loginUser() {
   console.log(usersl)
   location.reload(location.href ='index.html')
 }*/
-.
+/*.*/
 /*function userRegistration() {
     const userData = {
         document.getElementById('register-email').value,
