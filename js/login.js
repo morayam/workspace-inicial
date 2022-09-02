@@ -27,7 +27,7 @@ function loginUser() {
     localStorage.setItem('UsersLogin', JSON.stringify(userData));
     window.location.reload();
 }*/
-
+/*
 function loginUser() {
     const loginUsername = document.getElementById('login-username').value
     const loginPass = document.getElementById('login-pass').value
@@ -42,30 +42,24 @@ function loginUser() {
         console.log('Sin usuarios logueados')
     }
 }
+*/
+let usuarioLogueado = false
 
 inicio();
 
 function inicio() {
     eventos()
-    ocultarTodo();
     mostrarBotonera();
 }
 
 function eventos() {
-    dqs("navInicio").addEventListener("click", mostrarUInicio);
-    dqs("navIngreso").addEventListener("click", mostrarUIngreso);
-    dqs("navCerrarSesion").addEventListener("click", cerrarSesion);
+  dqs("navInicio").addEventListener("click", mostrarInicio);
+  dqs("navIngreso").addEventListener("click", mostrarIngreso);
+  dqs("navCerrarSesion").addEventListener("click", cerrarSesion);
+  dqs("btnIngreso").addEventListener("click", mostrarInicio);
 }
 
-function ocultarTodo() {
-    //menu (navbarNav): inicio y login
-    dqs("menu").style.display = "none";
-    dqs("inicio").style.display = "none";
-    dqs("login").style.display = "none";
-}
-
-function mostrarUInicio() {
-    ocultarTodo();
+function mostrarInicio() {
     mostrarBotonera();
     dqs("inicio").style.display = "block";
     if(UsersLogin) {
@@ -77,8 +71,7 @@ function mostrarUInicio() {
     }
 }
 
-function mostrarUIngreso() {
-    ocultarTodo();
+function mostrarIngreso() {
     mostrarBotonera();
     dqs("login").style.display = "block";
 }
