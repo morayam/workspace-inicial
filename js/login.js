@@ -43,6 +43,7 @@ function loginUser() {
     }
 }
 */
+/*
 let usuarioLogueado = false
 
 inicio();
@@ -100,4 +101,34 @@ function mostrarBotonera() {
 function dqs(id) {
     return document.querySelector("#"+id);
 }
+*/
+function login(){
+  let email = document.getElementById("login-username").value;
+  let pw = document.getElementById("login-pass").value;
 
+    if (email === "" && pw === ""){
+      alert('Faltan datos!')
+    } else {
+      localStorage.setItem('email',email);
+      location.href = 'index.html';
+    }
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('btnIngreso').addEventListener("click",()=>{
+    login();
+  });
+});
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  let email = localStorage.getItem('email')
+    if(email == null){
+      location.href = 'login.html';
+    } else {
+      document.getElementById('btnCerrarSesion').style.display = 'block';
+      document.getElementById('login-username').innerHTML = email;
+    }
+document.getElementById("cerrar").addEventListener("click",()=>{
+  localStorage.removeItem('email');
+});
+});
