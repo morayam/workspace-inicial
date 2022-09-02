@@ -85,7 +85,7 @@ function mostrarUIngreso() {
 
 function cerrarSesion() {
     usuarioLogueado = false;
-    document.getElementById('btnCerrarSesion').style.display = 'block'
+    dqs('btnCerrarSesion').style.display = 'block'
     inicio();
 }
 
