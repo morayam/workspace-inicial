@@ -1,4 +1,4 @@
-let userData;
+/*let userData;
 let usersr;
 let loginData;
 let usersl;
@@ -17,7 +17,7 @@ function loginUser() {
   localStorage.setItem('UsersLogin', JSON.stringify(usersl))
   console.log(usersl)
   location.reload(location.href ='index.html')
-}
+}*/
 .
 /*function userRegistration() {
     const userData = {
