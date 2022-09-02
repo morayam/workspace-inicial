@@ -62,6 +62,7 @@ function eventos() {
 function mostrarInicio() {
     mostrarBotonera();
     dqs("inicio").style.display = "block";
+    dqs("btnIngreso").addEventListener("click", href="index.html);
     if(UsersLogin) {
         dqs("divInicioUsuarioDesconocido").style.display = "none";
         dqs("divInicioUsuarioLogueado").style.display = "block";
