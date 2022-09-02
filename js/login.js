@@ -16,11 +16,33 @@ function loginUser() {
   usersl.push(loginData)
   localStorage.setItem('UsersLogin', JSON.stringify(usersl))
   console.log(usersl)
-  location.reload()
+  location.reload(location.href ='index.html')
 }
+.
+/*function userRegistration() {
+    const userData = {
+        document.getElementById('register-email').value,
+        document.getElementById('register-pass').value
+    };
+    localStorage.setItem('UsersLogin', JSON.stringify(userData));
+    window.location.reload();
+}*/
 
-let usuarioLogueado = false;
-
+function loginUser() {
+    const loginUsername = document.getElementById('login-username').value
+    const loginPass = document.getElementById('login-pass').value
+    if (localStorage.getItem('UsersLogin')) {
+        const loginDeets = JSON.parse(localStorage.getItem('UsersLogin'))
+        if (loginEmail === loginDeets.email && loginPass === loginDeets.password) {
+            console.log('Ingreso exitoso')
+        } else {
+            console.log('Ingreso fallido')
+        }
+    } else {
+        console.log('Sin usuarios logueados')
+    }
+}
+.
 inicio();
 
 function inicio() {
@@ -46,7 +68,7 @@ function mostrarUInicio() {
     ocultarTodo();
     mostrarBotonera();
     dqs("inicio").style.display = "block";
-    if(usuarioLogueado) {
+    if(UsersLogin) {
         dqs("divInicioUsuarioDesconocido").style.display = "none";
         dqs("divInicioUsuarioLogueado").style.display = "block";
     }else{
@@ -63,20 +85,21 @@ function mostrarUIngreso() {
 
 function cerrarSesion() {
     usuarioLogueado = false;
+    document.getElementById('btnCerrarSesion').style.display = 'block'
     inicio();
 }
 
 function mostrarBotonera() {
     if(!usuarioLogueado){
         dqs("menu").style.display = "block";
-        dqs("btnInicio").style.display = "block";
-        dqs("btnIngreso").style.display = "block";
-        dqs("btnCerrarSesion").style.display = "none";
+        dqs("navInicio").style.display = "block";
+        dqs("navIngreso").style.display = "block";
+        dqs("navCerrarSesion").style.display = "none";
     }else{
         dqs("menu").style.display = "block";
-        dqs("btnInicio").style.display = "block";
-        dqs("btnIngreso").style.display = "none";
-        dqs("btnCerrarSesion").style.display = "block";
+        dqs("navInicio").style.display = "block";
+        dqs("navIngreso").style.display = "none";
+        dqs("navCerrarSesion").style.display = "block";
     }
 }
 
