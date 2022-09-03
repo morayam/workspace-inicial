@@ -116,7 +116,6 @@ function login(){
 
 document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('btnIngreso').addEventListener("click",()=>{
-    login();
   });
 });
 
