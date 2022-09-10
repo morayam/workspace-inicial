@@ -5,10 +5,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>eMercado - Todo lo que busques está aquí</title>
-  
+
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
   <style>
     body {
       background-color: rgb(248, 249, 250);
@@ -17,28 +18,57 @@
 </head>
 
 <body>
-    
-    <div id="inicio">
-        <h1>Bienvenido a eMercado</h1>
-        <div id="divInicioUsuarioDesconocido">
-            <p>Gracias por formar parte de eMercado. Por favor, complete sus datos para iniciar sesión.</p>
-        </div>
-    </div>
+  <div class="container">
 
-    <div id="login">
-        <h4>Iniciar sesión</h4>
-        </br>
-        <label>Usuario</label>
-        </br>
-        <input type="text" id="login-username"/>
-        </br>
-        <label>Contraseña</label>
-        </br>
-        <input type="password" id="login-pass"/>
-        </br>
-        <input type="button" value="Ingresar" id="btnIngreso"/>
+
+    <div class="row justify-content-md-center">
+      <div class="col-md-9 order-md-1">
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="logo_mercado text-center"></div>
+            <div class="subtitulo text-center">tu e_commerce favorito!</div>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-md-12 mb-3">
+            <h1>Inicio de sesion</h1>
+          </div>
+        </div>
+
+        <form class="needs-validation" id="login-info">
+
+          <div class="row text-center">
+            <div class="col-md-12 mb-3">
+              <label for="productName">Usuario</label>
+              <input type="text" class="form-control" id="login-username" value="" name="productName">
+              <div class="invalid-feedback">
+                Ingresa un usuario
+              </div>
+            </div>
+          </div>
+
+          <div class="row text-center">
+            <div class="col-md-12 mb-3">
+              <label for="productName">Contraseña</label>
+              <input type="password" class="form-control" id="login-pass" value="" name="productName">
+              <div class="invalid-feedback">
+                Ingrese contraseña
+              </div>
+            </div>
+          </div>
+
+          <div class="row text-center">
+            <div class="col-md-12 mb-3">
+              <input class="btn btn-primary btn-lg" type="submit" value="Ingresar" id="btnIngreso" />
+            </div>
+            </row>
+
+        </form>
+      </div>
     </div>
-</main>
+  </div>
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
@@ -50,4 +80,5 @@
   </footer>
   <script src="js/login.js"></script>
 </body>
+
 </html>
