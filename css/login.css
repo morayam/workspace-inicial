@@ -1,8 +1,13 @@
 .subtitulo {
+    font-size:larger;
     color: green;
 }
 
 .logo_mercado {
     background: url('../img/login.png');
-    height: 30vh;
+    height: 40vh;
+}
+
+h1{
+    color:darkgreen;
 }

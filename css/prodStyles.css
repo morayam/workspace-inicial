@@ -1,0 +1,172 @@
+body{background-color:  whitesmoke;
+    place-items: center;
+}
+
+.name{
+    font-style: bold;
+    text-transform: uppercase;
+}
+
+.card{
+    border:none;
+    background-color: rgb(0, 16, 22);
+}
+
+.pb-5{
+    height:fit-content;
+    padding: 5em inherit;
+    margin-bottom: 0;
+    background-color: #d7e6ee;
+/*    background: url('../img/cover_back.png');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.category-row{
+    justify-content: center;
+    color: white;
+    background-color: #0d462b;
+    font-style: bold;
+    text-align: center;
+    border: 1px solid #198754;    
+}
+.product{background-color: #eee}
+.brand{font-size: 13px}
+.act-price{color:#198754;font-weight: 700}
+.dis-price{text-decoration: line-through}
+.about{font-size: 19px}
+.color{margin-bottom:10px}label
+.radio{cursor: pointer}label
+.radio input{position: absolute;top: 0;left: 0;visibility: hidden;pointer-events: none}label
+.radio span{padding: 2px 9px;border: 2px solid #198754;display: inline-block;color: #198754;border-radius: 3px;text-transform: uppercase}label
+.radio input:checked+span{border-color: #198754;background-color: #198754;color: #fff}
+.btn-danger{background-color: #198754 !important;border-color: #0d462b !important}
+.btn-danger:hover{background-color: #0d462b !important;border-color: #198754 !important}
+.btn-danger:focus{box-shadow: none}
+.btn-primary{
+    background-color: #198754 !important;
+    border-color: #0d462b !important;
+}
+.btn-primary:hover{
+    background-color: #0d462b !important;
+}
+
+.checked {
+    color:orange;
+    
+    
+}
+
+.title{
+    color: #198754;
+    font-style: bold;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+
+.subtitle{
+    color: #198754;
+    font-style: bold;
+    background-color: whitesmoke;
+}
+
+.back{
+    color: #198754;
+    font-style: bold;    
+}
+
+.back:hover{
+    color:#0d462b;
+    font-style: bold;    
+}
+
+.cart i{
+    margin-right: 10px
+}
+
+.cart i:hover{
+    color:#0d462b;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+/*
+html,body {
+    height: 100%
+}
+
+body {
+font-family: 'Source Sans Pro', sans-serif;
+}
+*/
+
+
+
+ .card {
+     position: relative;
+     display: flex;
+     padding:20px;
+     flex-direction: column;
+     min-width: 0;
+     word-wrap: break-word;
+     background-color: #fff;
+     background-clip: border-box;
+/*     border: 1px solid #d2d2dc;*/
+     border-radius: 11px;
+     -webkit-box-shadow: 0px 0px 5px 0px rgb(249, 249, 250);
+     -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1);
+     box-shadow: 0px 0px 5px 0px rgb(161, 163, 164)
+ }
+
+.media img{
+      
+    width: 60px;
+    height: 60px;
+}
+
+
+.reply a {
+    
+    text-decoration: none;
+}
+
+.puntuacion {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    }
+
+    .puntuacion input {
+    position: absolute;
+    top: -100px;
+    }
+
+    .images.images.p-3{
+        height: 100%;
+    }
+
+.product.p-4{
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+    .puntuacion label {
+    float: right;
+    color: #c1b8b8;
+    font-size: 30px; 
+    }
+
+.puntuacion label:hover,
+.puntuacion label:hover ~ label,
+.puntuacion input:checked ~ label {
+    color:goldenrod;
+}
+
+.calification-span{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color:#0d462b;
+    display: none;
+}

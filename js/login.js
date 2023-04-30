@@ -1,11 +1,3 @@
-function login() {
-
-  
-  // else {
-
-  // }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
 
   let loginForm = document.getElementById("login-info");
@@ -41,3 +33,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 });
+

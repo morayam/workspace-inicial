@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.getElementById("sortByCount").addEventListener("click", function () {
         sortAndShowProducts(ORDER_BY_REL);
     });
-    
+
     document.getElementById("clearRangeFilter").addEventListener("click", function () {
         document.getElementById("rangeFilterCountMin").value = "";
         document.getElementById("rangeFilterCountMax").value = "";
@@ -93,25 +93,25 @@ function showProductsList() {
             ) {
 
             htmlContentToAppend += `
-        <div class="list-group-item list-group-item-action">
+        <div>
+        <div onclick="setProdID(${products.id})" class="list-group-item list-group-item-action cursor-active">
             <div class="row">
-                <div class="col-3">
-                    <img src="` + products.image + `" alt="product image" class="img-thumbnail">
-                </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <div class="mb-1">
-                        <h4>`+ products.name + products.currency + products.cost + `</h4> 
-                        <p> `+ products.description + `</p> 
-                        </div>
-                        <small class="text-muted">` + products.soldCount + ` artículos</small> 
+                    <div class="col-3">
+                        <img src="` + products.image + `" alt="product image" class="img-thumbnail">
                     </div>
-                </div>
+                    <div class="col">
+                        <div class="d-flex w-100 justify-content-between">
+                            <div class="mb-1">
+                            <h4>`+ products.name + products.currency + products.cost + `</h4> 
+                            <p> `+ products.description + `</p> 
+                            </div>
+                            <small class="text-muted">` + products.soldCount + ` Artículos</small> 
+                        </div>
+                    </div>
             </div>
         </div>
         `
         }
-
         document.getElementById("productsList").innerHTML = htmlContentToAppend;
     }
 }
@@ -150,6 +150,11 @@ function sortAndShowProducts(sortCriteria, productsArray) {
 
     currentProductsArray = sortProducts(currentSortCriteria, currentProductsArray);
 
-    //Muestro las categorías ordenadas
+    //Muestra las categorías ordenadas
     showProductsList();
+}
+
+function setProdID(id) {
+    localStorage.setItem("ProdID", id);
+    window.location = "product-info.html"
 }
