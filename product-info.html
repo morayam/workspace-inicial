@@ -12,7 +12,7 @@
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/prodStyles.css" rel="stylesheet">
   <link href="/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">egrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!-- Aquí va la ruta de FontAwesome-->
 </head>
 
@@ -31,20 +31,21 @@
           <li class="nav-item">
             <a class="nav-link " id="navInicio" href="index.html">Inicio</a>
           </li>
-
-          <li class="nav-item">
-          </li>
-
           <li class="nav-item active">
             <a class="nav-link" href="categories.html">Categorías</a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item"><a id="mail-usuario" class="nav-link" href="my-profile.html"></a>
-          </li>
-          <a class="nav-link" id="navCerrarSesion" href="index.html">Cerrar sesión</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="mail-usuario" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" id="carrito" href="cart.html">Mi carrito</a></li>
+              <li><a class="dropdown-item" id="perfil" href="my-profile.html">Mi perfil</a></li>
+              <li><a class="dropdown-item" id="cerrarSesion" href="index.html">Cerrar sesión</a></li>
+            </ul>
+            </li>
         </ul>
       </div>
     </div>
@@ -63,14 +64,11 @@
     <div class="container mt-5 mb-5">
       <div class="category-row">
         <h1 id="categoryFocus"></h1>
-      </div>
+        </div>
       </br>
       <div class="row d-flex justify-content-center">
           <div class="col-md-10">
               <div class="card">
-                 
-                
-                
                 <div class="row">
                       <div class="col-md-6">
                           <div id="images" class="images p-3">
@@ -97,21 +95,19 @@
                               <p id=description class="about"></p>
               
                               <div class="cart mt-4 align-items-center">
-                              <button class="btn btn-danger text-uppercase mr-2 px-6">Añadir al carrito</button>
+                              <button id="addBtn" class="btn btn-danger text-uppercase mr-2 px-6">Añadir al carrito</button>
                               </div>
                               <div id="relatedProducts" class="mt-4 mb-3">
-
                               </div>
                               </div>
-                        </div>
+                            </div>
                <div class="row">
                     <div class="col-md-12">
                       <br><br>
                         <h3 class="title mb-5">
                          Sección de comentarios
                         </h3>
-                        <div id=comment class="row">
-                        
+                        <div id=comment class="row">                        
                         </div>                                   
                     </div>
                        <form>
@@ -135,33 +131,23 @@
     </div><br>
      <span class="calification-span" id="valor"></span>
      <br>
-     <span id="calif"></span>                     
-    </select>
-    </div>
-    <div class="form-group">
-      <label class="subtitle" for="exampleFormControlTextarea1">Comentario</label>
-      <textarea class="form-control" id="FormControlComentario" rows="3"></textarea>
-    </div>
+     <span id="calif"></span>
+     <div class="form-group">
+       <label class="subtitle" for="exampleFormControlTextarea1">Comentario</label>
+       <textarea class="form-control" rows="3"></textarea>
+       <div>
+         <input class="btn btn-primary btn-lg" type="submit" value="Comentar" id="btnComment"/>
+       <br>
+     </div> 
+     </div>
     </form>
-                  
-              </div>
-              <br>
-                <input class="btn btn-primary btn-lg" type="submit" value="Comentar" id="btnComment"/>
-                  </div>
-                  </div> 
-                   </div>
-                   </div>
-                </div>              
-                </div>
-
-
-      </div>
-
-
-
     </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
   </main>
-
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
@@ -185,7 +171,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
-
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

@@ -2,29 +2,29 @@
 <html lang="es">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>eMercado - Todo lo que busques está aquí</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/cartStyles.css" rel="stylesheet">
 </head>
 
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav w-100 justify-content-between">
           <li class="nav-item">
             <a class="nav-link active" id="navInicio" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
           </li>
           <li class="nav-item">
             <a class="nav-link" href="categories.html">Categorías</a>
@@ -32,29 +32,295 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
-            <a id="mail-usuario" class="nav-link" href="my-profile.html"></a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="mail-usuario" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" id="carrito" href="cart.html">Mi carrito</a>
+              </li>
+              <li>
+                <a class="dropdown-item" id="perfil" href="my-profile.html">Mi perfil</a>
+              </li>
+              <li>
+                <a class="dropdown-item" id="cerrarSesion" href="index.html">Cerrar sesión</a>
+              </li>
+            </ul>
           </li>
-          <a class="nav-link" id="navCerrarSesion" href="index.html">Cerrar sesión</a>
         </ul>
       </div>
     </div>
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <div class="category-row">
+        <h1>Carrito de compra</h1></br><span id="subtitle" class="h3"></span>
       </div>
+      </br>
+      <!--ROW PARA EL TÍTULO/SUBTITULO-->
+      <div class="row justify-content-center align-items-center d-flex">
+        <!--PRIMERA ROW (SE LE SACÓ: h-100)-->
+        <div class="col-md-10">
+          <div class="card mb-4">
+
+
+            <div class="row align-items-center">
+              <!--ROW CON EL CONTENIDO DE LOS PRODUCTOS-->
+              <div id="img" class="col-md-2"></div>
+              <!--IMÁGEN-->
+              <div class="col-md-2 d-flex justify-content-center">
+                <div>
+                  <p class="small text-muted mb-4 pb-2">Nombre</p>
+                </div>
+              </div>
+              <!--COL NOMBRE DEL PRODUCTO-->
+              <div class="col-md-2 d-flex justify-content-center">
+                <div>
+                  <p class="small text-muted mb-4 pb-2">Cantidad</p>
+                  <!--PÁRRAFO-->
+                  <!--FUNCIONALIDAD-->
+                </div>
+              </div>
+              <!--COL CANTIDAD-->
+              <div class="col-md-2 d-flex justify-content-center">
+                <div>
+                  <p class="small text-muted mb-4 pb-2">Moneda</p>
+                </div>
+              </div>
+              <!--MONEDA/CURRENCY-->
+              <div class="col-md-2 d-flex justify-content-center">
+                <div>
+                  <p class="small text-muted mb-4 pb-2">Precio</p>
+                </div>
+              </div>
+              <!--PRECIO-->
+              <div class="col-md-1 d-flex justify-content-center">
+                <div>
+                  <p id="totalProd" class="small text-muted mb-4 pb-2">
+                    Subtotal 
+                  </p>
+                </div>
+              </div>
+              <!--SUBTOTAL-->
+              <div class="col-md-1 d-flex justify-content-center">
+              </div>
+              <!--PAPELERA-->
+            </div>
+
+            <div id="cartItems"></div>
+            <!--CIERRA LA COL CON EL PRIMER PRODUCTO-->
+            <form>
+              <!--FORMULARIO DE ENVÍO-->
+              <div class="row md-12">
+                <!--ROW DEL FORMULARIO DE ENVÍO [ABRE]-->
+                <div class="col-md-4 col-lg-4 col-xl-3 mb-4 mb-md-0">
+                  <div class="d-flex flex-row pb-3">
+                    <div class="d-flex align-items-center pe-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1v" value="1"
+                        aria-label="premium" checked />
+                    </div>
+                    <div class="rounded border w-100 p-3">
+                      <p class="d-flex align-items-center mb-0">
+                        PREMIUM: 2 a 5 días (15%)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row pb-3">
+                    <div class="d-flex align-items-center pe-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2v" value="2"
+                        aria-label="express" />
+                    </div>
+                    <div class="rounded border w-100 p-3">
+                      <p class="d-flex align-items-center mb-0">
+                        EXPRESS: 5 a 8 días (7%)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row">
+                    <div class="d-flex align-items-center p-2">
+                      <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel3v" value="3"
+                        aria-label="standard" />
+                    </div>
+                    <div class="rounded border w-100 p-3">
+                      <p class="d-flex align-items-center mb-0">
+                        STANDARD: 12 a 15 días (5%)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xl-6">
+                  <div class="row">
+                    <div class="col-12 col-xl-6">
+                      <div class="form-outline mb-3 mb-xl-5">
+                        <input type="text" id="typeName" class="form-control form-control-lg" siez="17" />
+                        <label class="form-label" for="typeNumber">Número</label>
+                      </div>
+                      <div class="form-outline mb-3 mb-xl-5">
+                        <input type="text" id="typeExp" class="form-control form-control-lg" size="17" />
+                        <label class="form-label" for="typeText">Calle</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                      <div class="form-outline">
+                        <input type="text" id="typeText" class="form-control form-control-lg" size="17" />
+                        <label class="form-label" for="typeText">Esquina</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xl-3 mb-4 mb-md-0">
+                  <!--DIV DE LA ÚLTIMA COL [ABRE]-->
+                  <div class="d-flex justify-content-between" style="font-weight: 500;">
+                    <p class="mb-2">Subtotal USD <span id="subt"></span></p></br>
+                    <p id="generalSubtotal" class="mb-2"></p>
+                  </div>
+
+                  <div class="d-flex justify-content-between" style="font-weight: 500;">
+                    <p class="mb-2">Costo de envio</p></br>
+                    <p id="costoEnvio" class="mb-2"></p>
+                  </div>
+
+                  <hr class="my-4">
+                  <div class="d-flex justify-content-between mb-4" style="font-weight: 500;">
+                    <p class="mb-2">Total</p>
+                    <p class="mb-2" id="total"></p>
+                  </div>
+                  <!--TOTAL-->
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary btn-block btn-lg buy" data-bs-toggle="modal" data-bs-target="#modalTerminos"
+                      for="terminos">                      
+                      <div class="d-flex justify-content-between">
+                        <span>Comprar</span>
+                      </div>  
+                    </button>
+                  </div>              
+                  </br>
+                  <!--<BOTÓN DE COMPRA (BOTÓN DE VOLVER: button type="button" class="btn btn-light btn-lg me-2">voler</button>)-->
+                </div>
+                <!--TERCERA COL DEL FORMULARIO DE ENVÍO-->
+              </div>
+              <!--ROW DEL FORMULARIO DE ENVÍO [CIERRA]-->
+            </form>
+            <!--FORMULARIO-->
+          </div>
+          <!--PRIMERA CARD-->
+        </div>
+        <!--COL MD-10 PARA UBICAR LA CARD-->
+      </div>
+      <!--ROW PARA UBICAR LA CARD-->
+      
+      <!--MODAL START-->
+      <form class="needs-validation" id="form">
+    <div class="modal fade" id="modalTerminos" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            
+            <div class="col-md-12">
+
+              <!--PREMIUM CHOICE START-->
+              <div class="d-flex flex-row pb-3">
+                <div class="d-flex align-items-center ">
+                  <input class="form-check-input" type="radio" name="radioNoLabel" id="tarjeta" value="1"
+                    aria-label="premium" checked />
+                </div>
+                <div class="rounded border w-100 p-3">
+                  <p class="d-flex align-items-center mb-0">
+                    Tarjeta de credito
+                  </p>
+                </div>
+              </div>
+              
+              <div class="col-sm-6">
+                <label for="nombre" class="form-label">Numero de tarjeta</label>
+                <input id="numeroTarjeta" type="text" class="form-control" required>
+                <div class="invalid-feedback">
+                  Debe ingresar su número de tarjeta.
+                </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="apellido" class="form-label">Codigo seguridad</label>
+                <input type="text" class="form-control" id="codigoSeguridad" required>
+                <div class="invalid-feedback">
+                  Debe ingresar su código de seguridad.
+                 </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="email" class="form-label">Vencimiento</label>
+                <input type="text" class="form-control" id="vencimiento" required>
+                <div class="invalid-feedback">
+                  Debe ingresar la fecha de vencimiento.
+                </div>
+              </div>
+              <!--PREMIUM CHOICE END-->
+
+              <!--EXPRESS CHOICE START-->
+              <div class="d-flex flex-row pb-3">
+                <div class="d-flex align-items-center ">
+                  <input id="transferencia" class="form-check-input" type="radio" name="radioNoLabel" value="2"
+                    aria-label="express">
+                </div>
+                <div class="rounded border w-100 p-3">
+                  <p class="d-flex align-items-center mb-0">
+                    Transferencia bancaria
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="nombre" class="form-label">Numero banco</label>
+                <input  id="numeroBanco" type="text" class="form-control" disabled required>
+                <div class="invalid-feedback">
+                 Debe ingresar el número de su cuenta.
+                </div>
+              </div>
+              <!--EXPRESS CHOICE END-->
+            </div>
+          </div>
+          <!--MODAL FOOTER SART-->
+          <div class="modal-footer">
+            <div class="form-check">
+              <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal" id="btnCerrarModal close">Cerrar</button>
+            <span id="termino" class="error"></span>
+            </div>
+            <div class="col-sm-12">
+              <button type="submit" class="btn btn-secondary buy" id="BUY">
+                <div class="d-flex justify-content-between">
+                  <span>Confirmar compra</span>
+                </div>  
+              </button>
+            </div>              
+          </div>
+          <!--MODAL FOOTER END-->
+        </div>
+        <!--MODAL CONTENT END-->
+      </div>
+      <!--MODAL DIALOG END-->
     </div>
-  </main>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
+    <!--MODAL END-->
+  </form>
+  </div>
+  <!--CONTAINER-->
+</main>
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-end">
+      <a href="#">Volver arriba</a>
+    </p>
+    <p class="foot">
+        Este sitio forma parte de
+        <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> - 2022
       </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
-        2022</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+      <p class="foot">
+        Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la
+        letra del obligatorio.
+      </p>
     </div>
   </footer>
   <div id="spinner-wrapper">
@@ -68,6 +334,6 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
-
 </html>
